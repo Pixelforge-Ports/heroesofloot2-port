@@ -17,6 +17,7 @@ public class Main extends myCanvas {
     private GL20 bridgeGl;
     private Graphics bridgeGraphics;
     private Application physicalApp;
+    private Input physicalInput, bridgeInput;
     private boolean ready;
     private long lastFrame;
     private int frames;
@@ -66,8 +67,11 @@ public class Main extends myCanvas {
         });
         argument_noController = true;
         super.create();
-        InputProcessor input = Gdx.input.getInputProcessor();
+        physicalInput = Gdx.input;
+        bridgeInput = CoordinateInput.wrap(physicalInput, layout);
+        InputProcessor input = physicalInput.getInputProcessor();
         Gdx.input.setInputProcessor((InputProcessor)Proxy.newProxyInstance(Main.class.getClassLoader(),new Class<?>[]{InputProcessor.class},(self,method,args)-> {
+            Gdx.input = bridgeInput;
             if (method.getName().equals("keyDown") || method.getName().equals("keyUp")) {
                 int key = (Integer)args[0]; int mirror = -1;
                 if (key == Input.Keys.LEFT) mirror = Input.Keys.A;
@@ -81,6 +85,7 @@ public class Main extends myCanvas {
             }
             return delegate(input,method,args);
         }));
+        Gdx.input = bridgeInput;
         ready = true;
         resize(physicalGraphics.getWidth(),physicalGraphics.getHeight());
         start = System.nanoTime();
@@ -137,7 +142,7 @@ public class Main extends myCanvas {
     @Override public void dispose() {
         saveProfile();
         try { if (ready) super.dispose(); }
-        finally { if (physicalGraphics != null) { Gdx.app = physicalApp; Gdx.graphics = physicalGraphics; Gdx.gl = physicalGl; Gdx.gl20 = physicalGl; } }
+        finally { if (physicalGraphics != null) { Gdx.app = physicalApp; Gdx.graphics = physicalGraphics; Gdx.gl = physicalGl; Gdx.gl20 = physicalGl; if (physicalInput != null) Gdx.input = physicalInput; } }
     }
 
     private static Object delegate(Object target,Method method,Object[] args) throws Throwable {
@@ -145,6 +150,7 @@ public class Main extends myCanvas {
         catch (InvocationTargetException e) { throw e.getCause(); }
     }
     private void restoreDisplayBridge() {
+        if (bridgeInput != null) Gdx.input = bridgeInput;
         if (bridgeGraphics != null) { Gdx.graphics = bridgeGraphics; Gdx.gl = bridgeGl; Gdx.gl20 = bridgeGl; }
     }
     private void installDisplayBridge() {

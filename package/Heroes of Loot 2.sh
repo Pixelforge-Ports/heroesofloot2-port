@@ -101,6 +101,7 @@ cd "$GAMEDIR" || fail "Cannot open the game directory."
 source "$GAMEDIR/display.inc" || fail "Display helper missing."
 heroesofloot2_display_setup || fail "Use auto or WIDTHxHEIGHT in resolution.txt."
 printf 'Firmware: %s; display: %s\n' "$CFW_NAME" "$heroesofloot2_display_description"
+export SDL_TOUCH_MOUSE_EVENTS=0
 export SDL_GAMECONTROLLERCONFIG="$sdl_controllerconfig"
 export HOTKEY=back
 $GPTOKEYB2 java -c "$GAMEDIR/heroesofloot2.ini" &

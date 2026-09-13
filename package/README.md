@@ -65,7 +65,8 @@ uses PortMaster's `directory` value. Avoid creating an extra `HeroesofLoot2/` wr
 | L1 | 1 |
 | R1 | 2 |
 | L2 | ESC / Back / pause |
-| R2 | X / Action / confirm |
+| R2 | Left mouse button / fire toward the cursor |
+| Right stick | Mouse cursor / aim |
 | Start | O / Options |
 | Select | ESC / Back / pause |
 | Left stick | Same directions as the D-pad |
@@ -103,3 +104,5 @@ audio, game speed, save/reload, suspend/resume and clean exit. Keep purchased ga
 The original port and host use the MIT license; their separate notices and the gptokeyb
 GPL license are in `heroesofloot2/licenses/`. Upstream copyright notices remain intact.
 The game and screenshot retain Orangepixel's rights. Java, Westonpack and the mapper are installed separately by PortMaster.
+
+Aim with the right stick and use R2 for mouse fire. A retains the keyboard action. Right-stick aiming requires a handheld or connected controller with a right analog stick. Please test arrow targeting in all directions, firing while moving, cursor edges, and aiming at your screen resolution.

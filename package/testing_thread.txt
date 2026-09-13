@@ -28,7 +28,8 @@ Controls:
 | L1 | 1 |
 | R1 | 2 |
 | L2 | ESC / Back / pause |
-| R2 | X / Action / confirm |
+| R2 | Left mouse button / fire toward the cursor |
+| Right stick | Mouse cursor / aim |
 | Start | O / Options |
 | Select | ESC / Back / pause |
 | Left stick | Same directions as the D-pad |
@@ -54,3 +55,5 @@ save/reload, suspend/resume and exit. Report performance during actual gameplay.
 
 For failures attach heroesofloot2/log.txt and steps to reproduce.
 Do not upload purchased game files, installers or personal information.
+
+Aim with the right stick and use R2 for mouse fire. A retains the keyboard action. Right-stick aiming requires a handheld or connected controller with a right analog stick. Please test arrow targeting in all directions, firing while moving, cursor edges, and aiming at your screen resolution.

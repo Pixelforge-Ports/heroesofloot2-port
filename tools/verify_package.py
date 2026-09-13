@@ -55,6 +55,7 @@ def verify(root):
     require('$GPTOKEYB2 java -c ' in launcher, 'Launcher must use gptokeyb2')
     require('$GPTOKEYB ' not in launcher and 'TEXTINPUTINTERACTIVE' not in launcher, 'Legacy mapper setup')
     require(not any(n.endswith('.gptk') for n in files), 'Legacy mapping in package')
+    require('export SDL_TOUCH_MOUSE_EVENTS=0' in launcher, 'Disable touch-generated mouse events')
     mapping = files[game+'/'+config['mapping']].decode('utf-8')
     cp = configparser.ConfigParser(interpolation=None, strict=True)
     cp.read_string(mapping)
@@ -62,6 +63,7 @@ def verify(root):
     if game == 'mewnbase':
         require(cp['controls']['a'] == 'mouse_left' and cp['controls']['b'] == 'mouse_right', 'MewnBase needs real mouse buttons')
     require(cp['controls'].get('overlay') == 'clear', 'Explicit root controls required')
+    require(cp['controls']['right_analog'] == 'mouse_movement' and cp['controls']['r2'] == 'mouse_left', 'Mouse aim/fire mapping required')
     for section in cp.sections():
         for key, value in cp[section].items():
             require(not key.endswith('_hk'), 'Use a v2 hotkey state')

@@ -65,7 +65,8 @@ uses PortMaster's `directory` value. Avoid creating an extra `HeroesofLoot2/` wr
 | L1 | 1 |
 | R1 | 2 |
 | L2 | ESC / Back / pause |
-| R2 | X / Action / confirm |
+| R2 | Left mouse button / fire toward the cursor |
+| Right stick | Mouse cursor / aim |
 | Start | O / Options |
 | Select | ESC / Back / pause |
 | Left stick | Same directions as the D-pad |
@@ -145,3 +146,5 @@ and `testing_thread.txt` for the Discord testing post. Upload source files using
 `build/`, `dist/`, generated `ports/` and owned data are excluded by `.gitignore`.
 
 The Discord draft stays in source `testing_thread.txt`; it is not installed by the ZIP.
+
+Aim with the right stick and use R2 for mouse fire. A retains the keyboard action. Right-stick aiming requires a handheld or connected controller with a right analog stick. Please test arrow targeting in all directions, firing while moving, cursor edges, and aiming at your screen resolution.
