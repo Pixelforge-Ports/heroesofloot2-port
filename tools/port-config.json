@@ -1,0 +1,9 @@
+{
+  "id": "heroesofloot2",
+  "title": "Heroes of Loot 2",
+  "script": "Heroes of Loot 2.sh",
+  "zip": "HeroesofLoot2.zip",
+  "game_file": "HeroesOfLoot2.jar",
+  "mapping": "heroesofloot2.ini",
+  "runtime_libraries": false
+}

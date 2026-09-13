@@ -1,0 +1,43 @@
+{
+  "version": 4,
+  "name": "heroesofloot2.zip",
+  "items": [
+    "Heroes of Loot 2.sh",
+    "heroesofloot2"
+  ],
+  "items_opt": [],
+  "attr": {
+    "title": "Heroes of Loot 2",
+    "porter": [
+      "Pixelforge ports (Ronax)"
+    ],
+    "desc": "Switch between heroes to solve dungeon puzzles and fight through monster-filled rooms.",
+    "desc_md": null,
+    "inst": "Install HeroesofLoot2.zip, then copy your owned HeroesOfLoot2.jar into the installed heroesofloot2 folder. See heroesofloot2.md for supported files and installation steps. Requires compatible 64-bit ARM firmware and PortMaster Java 17 and Westonpack runtimes.",
+    "inst_md": null,
+    "genres": [
+      "action",
+      "rpg"
+    ],
+    "image": null,
+    "rtr": false,
+    "exp": false,
+    "runtime": [
+      "weston_pkg_0.2.squashfs",
+      "zulu17.54.21-ca-jre17.0.13-linux.squashfs"
+    ],
+    "reqs": [],
+    "arch": [
+      "aarch64"
+    ],
+    "min_glibc": "2.27",
+    "availability": "paid",
+    "store": [
+      {
+        "name": "GOG",
+        "gameurl": "https://www.gog.com/en/game/heroes_of_loot_2",
+        "developerurl": "https://orangepixel.net/"
+      }
+    ]
+  }
+}

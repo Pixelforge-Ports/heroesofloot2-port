@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameList>
+  <game>
+    <path>./Heroes of Loot 2.sh</path>
+    <name>Heroes of Loot 2</name>
+    <desc>Switch between heroes to solve dungeon puzzles and fight through monster-filled rooms.</desc>
+    <releasedate>20160607T000000</releasedate>
+    <developer>Orangepixel</developer>
+    <publisher>Orangepixel / THQ Nordic Mobile GmbH</publisher>
+    <genre>Action</genre>
+    <image>./heroesofloot2/screenshot.png</image>
+  </game>
+</gameList>

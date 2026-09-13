@@ -1,0 +1,21 @@
+build/
+dist/
+package/heroesofloot2/HeroesOfLoot2.jar
+package/heroesofloot2/runtime/*.jar
+package/heroesofloot2/saves/
+package/heroesofloot2/cache/
+package/heroesofloot2/resolution.txt
+package/heroesofloot2/log.txt
+__pycache__/
+*.pyc
+
+# Generated/private content
+ports/
+build/
+dist/
+package/heroesofloot2/HeroesOfLoot2.jar
+package/heroesofloot2/runtime/*-host.jar
+package/heroesofloot2/saves/
+package/heroesofloot2/cache/
+package/heroesofloot2/log.txt
+package/heroesofloot2/resolution.txt
